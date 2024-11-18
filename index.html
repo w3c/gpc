@@ -13,19 +13,7 @@
     </style>
     <script class="remove">
       var respecConfig = {
-        specStatus: 'unofficial',
-        postProcess: [(config, doc) => {
-          let time = doc.querySelector('#w3c-state time')
-           , h2 = doc.querySelector('#w3c-state')
-           , abs = doc.querySelector('#sotd > p')
-           , dl = doc.querySelector('div.head > details > dl')
-          ;
-          h2.innerHTML = 'Proposal ';
-          h2.appendChild(time);
-          abs.textContent = 'This document is a specification proposal.';
-          dl.removeChild(dl.firstElementChild);
-          dl.removeChild(dl.firstElementChild);
-        }],
+        specStatus: 'ED',
         xref: ['html'],
         editors: [
           {
@@ -75,8 +63,9 @@
           },
         ],
         shortName: 'gpc',
-        github: 'https://github.com/privacycg/gpc-spec',
-        edDraftURI: 'https://privacycg.github.io/gpc-spec/',
+        group: "privacy",
+        github: 'https://github.com/w3c/gpc',
+        edDraftURI: 'https://w3c.github.io/gpc/',
         xref: ['html'],
         localBiblio: {
           'CCPA-AG-FINAL-STATEMENT': {
