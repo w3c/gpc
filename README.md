@@ -7,7 +7,7 @@ This draft specification can be [viewed via GitHub Pages](https://w3c.github.io/
 
 ## Getting Involved
 
-This specification is a work item of the [Privacy Workin  Group](https://www.w3.org/groups/wg/privacy/).
+This specification is a work item of the [Privacy Working  Group](https://www.w3.org/groups/wg/privacy/).
 
 ## Resources
 - Visit [initiative site](https://globalprivacycontrol.org) to learn more about the proposed standard and who is involved
