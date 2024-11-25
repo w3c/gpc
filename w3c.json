@@ -1,5 +1,5 @@
 {
-    "group": "cg/privacycg",
-    "contacts": ["hober", "martinthomson", "erik-anderson", "weiler"],
-    "repo-type": "cg-report"
+    "group": "wg/privacy",
+    "contacts": ["tjwhalen"],
+    "repo-type": "rec-track"
 }

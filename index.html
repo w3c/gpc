@@ -3,29 +3,10 @@
   <head>
     <meta charset="utf-8">
     <script src="https://www.w3.org/Tools/respec/respec-w3c" async class="remove"></script>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.9em%22 font-size=%22105%22>🕹</text></svg>">
     <title>Global Privacy Control (GPC)</title>
-    <style>
-      body {
-        background: url(proposal.svg) no-repeat fixed !important;
-        background-size: 25px 380px !important;
-      }
-    </style>
     <script class="remove">
       var respecConfig = {
-        specStatus: 'unofficial',
-        postProcess: [(config, doc) => {
-          let time = doc.querySelector('#w3c-state time')
-           , h2 = doc.querySelector('#w3c-state')
-           , abs = doc.querySelector('#sotd > p')
-           , dl = doc.querySelector('div.head > details > dl')
-          ;
-          h2.innerHTML = 'Proposal ';
-          h2.appendChild(time);
-          abs.textContent = 'This document is a specification proposal.';
-          dl.removeChild(dl.firstElementChild);
-          dl.removeChild(dl.firstElementChild);
-        }],
+        specStatus: 'ED',
         xref: ['html'],
         editors: [
           {
@@ -33,23 +14,27 @@
             company: 'Wesleyan University',
             companyURL: 'https://www.wesleyan.edu/',
             url: 'https://www.privacytechlab.org/',
+            w3cid: 122220,
           },
           {
             name: 'Peter Snyder',
             company: 'Brave Software',
             companyURL: 'https://brave.com/',
             url: 'https://www.peteresnyder.com/',
+            w3cid: 109401,
           },
           {
             name: 'Justin Brookman',
             company: 'Consumer Reports',
             companyURL: 'https://www.consumerreports.org/',
+            w3cid: 80718,
           },
           {
             name: 'Aram Zucker-Scharff',
             company: 'The Washington Post',
             companyURL: 'https://www.washingtonpost.com/',
             url: 'https://aramzs.github.io/aramzs/',
+            w3cid: 113554,
           },
         ],
         formerEditors: [
@@ -75,8 +60,8 @@
           },
         ],
         shortName: 'gpc',
-        github: 'https://github.com/privacycg/gpc-spec',
-        edDraftURI: 'https://privacycg.github.io/gpc-spec/',
+        group: "wg/privacy",
+        github: 'w3c/gpc',
         xref: ['html'],
         localBiblio: {
           'CCPA-AG-FINAL-STATEMENT': {
@@ -98,12 +83,6 @@
           'GDPR': {
             title: 'General Data Protection Regulation (GDPR)',
             href: 'https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN',
-          },
-          'Privacy-Principles': {
-            title: 'Privacy Principles',
-            href: 'https://w3ctag.github.io/privacy-principles/',
-            authors: ['Robin Berjon', 'Jeffrey Yasskin'],
-            publisher: 'W3C',
           },
           'SB220': {
             title: 'Nevada SB220 (NRS 603A)',
@@ -134,7 +113,7 @@
         the one which a person choses to interact with. This result is a natural consequence of the
         increasing complexity of Web technology and of the division of labor between different
         services. While this architecture can be used in the service of better Web experiences,
-        it can also be abused to violate privacy ([[?Privacy-Principles]]). While data can be shared
+        it can also be abused to violate privacy ([[?privacy-principles]]). While data can be shared
         with service providers for limited operational purposes, it can also be shared with third
         parties or used for behavioral targeting in ways that many users find objectionable.
       </p>
@@ -357,7 +336,7 @@
         </p>
         <p>
           The GPC support representation MUST be an
-          <a href="https://tools.ietf.org/html/rfc8259#section-4">JSON object</a>, otherwise the
+          <a href="https://datatracker.ietf.org/doc/html/rfc8259#section-4">JSON object</a>, otherwise the
           origin's support is unknown. Members of this JSON object not in the list below have no
           meaning in this specification and MUST be ignored. Members include:
           <ul>
@@ -403,7 +382,7 @@
         have legal effects, depending on factors such as the location of the individual sending the
         signal, the scope of the applicable law, as well as any separate agreement between the
         recipient of the signal and the individual. For additional details on legal effects, 
-        <a href="https://privacycg.github.io/gpc-spec/explainer" target="_blank">consult the explainer</a>. 
+        <a href="https://privacycg.github.io/gpc-spec/explainer" target="_blank">consult the explainer</a>.
       </p>
       <p>
         For example, the use of the GPC signal by an individual will be intended to communicate the
