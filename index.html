@@ -109,8 +109,8 @@
     <section class="informative">
       <h2>Introduction</h2>
       <p>
-        Building websites today often requires relying on services provided by businesses other than
-        the one which a person choses to interact with. This result is a natural consequence of the
+        Building websites today often involves relying on services provided by businesses other than
+        the one with which a person choses to interact. This result is a natural consequence of the
         increasing complexity of Web technology and of the division of labor between different
         services. While this architecture can be used in the service of better Web experiences,
         it can also be abused to violate privacy ([[?privacy-principles]]). While data can be shared
@@ -118,10 +118,16 @@
         parties or used for behavioral targeting in ways that many users find objectionable.
       </p>
       <p>
-        Several legal frameworks exist — and more are on the way — within which people have the right
-        to request that their privacy be protected, including requests that their data not be sold
-        or shared beyond the business with which they intend to interact. Requiring that people
-        manually express their rights for each and every site they visit is, however, impractical.
+        Several different legal frameworks have been proposed or enacted by jurisdictions around
+        the world to address this concern. Some models rely upon user consent for tracking. Other
+        models based on the principle of data minimization simply prohibit certain data sharing or 
+        data processing entirely.
+      </p>
+      <p>
+        Some laws and proposals grant users the right to request that their privacy be
+        protected, including "opt out" requests that their data not be sold or shared beyond the
+        business with which they intend to interact. Requiring that people manually express their
+        rights for each and every site they visit is, however, impractical.
       </p>
       <blockquote cite="https://oag.ca.gov/sites/all/files/agweb/pdfs/privacy/ccpa-fsor.pdf">
         <p>
@@ -134,11 +140,20 @@
         </p>
       </blockquote>
       <p>
-        This specification addresses the issue by providing a way to signal, through an HTTP header
+        This specification is designed for this last category of laws and addresses the problem of the
+        difficulty of scaling user choices by providing a way to universally signal to all website
+        publishers, through an HTTP header
         or the DOM, a person's assertion of their applicable rights to prevent the sale of their data,
         the sharing of their data with third parties, and the use of their data for cross-site targeted
-        advertising. This signal is equivalent, for example, to the "global privacy control" in the
-        CCPA [[?CCPA-REGULATIONS]].
+        advertising. This signal allows users to take advantage of specific provisions in some of these
+        opt-out based laws, such as, for example, the provisions relating to "opt out preferences
+        signals" in the California Consumer Privacy Act. [[?CCPA-REGULATIONS]].
+      </p>
+      <p>
+        The specification should not be interpreted as an endorsement of the opt-out model of
+        regulation — or cross-site tracking more broadly — or a rejecion of other models based on
+        consent or data minimization. It is instead designed to make it possible to exercise the affirmative rights
+        granted to users in certain jurisdictions.
       </p>
     </section>
     <section>
