@@ -502,12 +502,19 @@
     <section>
       <h2 id="privacy">Privacy Considerations</h2>
       <p>
-        Exposing a user's preference (in the HTTP header field or <pre class="js">navigator</pre> object)
+        Exposing a user's preference (in the HTTP header field or {{Window/navigator}} object)
         potentially divides users into two groups in a way that might increase the information
-        available for fingerprinting. This extra information is available unless the signal
-        perfectly correlates with other signals. Depending on the browser and implementation, the GPC signal
-        may impose a privacy cost, though one intended to be justified by the privacy benefit
-        of sending the signal.
+        available for browser or device fingerprinting. This additional information is available 
+        unless the signal perfectly correlates with other signals or is turned on in a 
+        non-configurable setting. Thus, depending on the implementation, the GPC signal may impose 
+        a privacy cost, though, one intended to be justified by the privacy benefit of sending the 
+        signal.
+      </p>
+    </section>
+    <section>
+      <h2 id="security">Security Considerations</h2>
+      <p>
+        There are no known security impacts of the features in this specification.
       </p>
     </section>
     <section id="conformance"></section>
