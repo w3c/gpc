@@ -28,7 +28,7 @@ Global Privacy Control (GPC) is a proposed specification designed to allow Inter
   - [6.1 Example Presentations of User-agent Level UI](#61-example-presentations-of-user-agent-level-ui)
   - [6.2 User-agents](#62-user-agents)
   - [6.3 Adopting on Your Website](#63-adopting-on-your-website)
-  - [6.4 Consent to Track Notwithstanding a Universal GPC Signal](#64-consent-to-track-notwithstanding-a-universal-gpc-signal)
+  - [6.4 Consent to Disregard a Universal GPC Signal](#64-consent-to-track-notwithstanding-a-universal-gpc-signal)
 - [7. Alternatives Considered](#7-alternatives-considered)
 
 ## 1. Draft Specification
@@ -217,7 +217,7 @@ Setting the USPAPI for propagating GPC downstream.
 
 Generally website developers should consider GPC signals to be identical to a user flipping the opt out switch on their website and take action accordingly.
 
-### 6.4 Consent to Track Notwithstanding a Universal GPC Signal
+### 6.4 Consent to Disregard a Universal GPC Signal
 
 A do-not-sell-or-share preference is when a person generally requests of all website publishers that their data "not be sold or shared.” However, it is possible that a particular publisher would seek to enter into a separate agreement with a user permitting that publisher to sell or share the user’s data notwithstanding the general preference. The GPC spec does not provide for a mechanism or syntax to negotiate or indicate such an exception, so any user consent to tracking would be communicated apart from the GPC signal.
 
