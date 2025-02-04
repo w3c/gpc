@@ -9,6 +9,8 @@ Editors:
 
 Global Privacy Control (GPC) is a proposed specification designed to allow Internet users to notify businesses of their preference to not have their personal information sold or shared, or used for targeted advertising. It consists of a setting or extension in the user’s browser that provides a mechanism that websites can use to indicate they support the specification.
 
+This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice. 
+
 - [1. Draft Specification](#1-draft-specification)
 - [2. Background](#2-background)
 - [3. Solution](#3-solution)
