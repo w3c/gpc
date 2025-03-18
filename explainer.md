@@ -196,7 +196,7 @@ If the user-agent makes the GPC setting visible when active, it should retain in
 
 User-agents should not challenge people with a request to set GPC in either mode beyond initial setup. Per-domain settings of GPC should be up to an individual to engage with, not pushed via a notification, modal, pop-up, or similar interactive element.
 
-Many user-agents offer a "private browsing" or "incognito" mode that provides heightened privacy protections when in use, such as not retaining local history or cookies at the end of a session. Depending upon how that private mode is described to users, the developers of the user-agent may deem it appropriate to send GPC to websites while this mode is activated as a means of offering additional privacy protection.
+Many user-agents offer a "private browsing" or "incognito" mode that provides heightened privacy protections when in use, such as not retaining local history or cookies at the end of a session. Depending upon how that private mode is described to users, the developers of the user-agent may deem it appropriate to send GPC to websites while this mode is activated as a means of offering additional privacy protection. While browser developers make decide that additional consent or user prompting is unnecessary before sending GPC in such cases, they should be transparent about the fact that in "private" or "incognito" mode, GPC will be sent.
 
 ### 6.3 Adopting on Your Website
 
