@@ -30,6 +30,7 @@ This Legal and Implementation Considerations Guide is designed to give an overvi
   - [6.1 Example Presentations of User-agent Level UI](#61-example-presentations-of-user-agent-level-ui)
   - [6.2 User-agents](#62-user-agents)
   - [6.3 Adopting on Your Website](#63-adopting-on-your-website)
+  - [6.4 Consent to Disregard a Universal GPC Signal](#64-consent-to-track-notwithstanding-a-universal-gpc-signal)
 - [7. Alternatives Considered](#7-alternatives-considered)
 
 ## 1. Draft Specification
@@ -226,6 +227,12 @@ if (
 Setting the USPAPI for propagating GPC downstream.
 
 Generally website developers should consider GPC signals to be identical to a user flipping the opt out switch on their website and take action accordingly.
+
+### 6.4 Consent to Disregard a Universal GPC Signal
+
+A do-not-sell-or-share preference is when a person generally requests of all website publishers that their data "not be sold or shared.” However, it is possible that a particular publisher would seek to enter into a separate agreement with a user permitting that publisher to sell or share the user’s data notwithstanding the general preference. The GPC spec does not provide for a mechanism or syntax to negotiate or indicate such an exception, so any user consent to tracking would be communicated apart from the GPC signal.
+
+When and how a separate agreement to disregard GPC requests overrides the legal status of the signal will be a matter of local law. Some jurisdictions that have explicitly endorsed GPC as a legally binding opt-out signal have also placed limitations on how companies can request permission to track despite the general signal. One rationale for such limitations is that without some restrictions, users with GPC enabled could be inundated with countless requests for exceptions to track as they browse the internet — undermining the fundamental purpose of offering a simple, binary universal opt-out tool. Both California and Colorado, for example, constrain how overrides for universal opt-out signals like GPC can be requested, including rules against retaliating against users for exercising privacy rights, conditions for valid consent, and limiting how frequently companies can ask consumers to reconsider opt-out requests.
 
 ## 7. Alternatives Considered
 
