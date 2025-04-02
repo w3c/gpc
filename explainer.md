@@ -1,4 +1,4 @@
-# Global Privacy Control (GPC) Explainer
+# Global Privacy Control (GPC) Legal and Implementation Considerations Guide
 
 Editors:
 [Aram Zucker-Scharff](https://github.com/AramZS)
@@ -8,6 +8,8 @@ Editors:
 ## 0. tl;dr
 
 Global Privacy Control (GPC) is a proposed specification designed to allow Internet users to notify businesses of their preference to not have their personal information sold or shared, or used for targeted advertising. It consists of a setting or extension in the user’s browser that provides a mechanism that websites can use to indicate they support the specification.
+
+This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice. 
 
 - [1. Draft Specification](#1-draft-specification)
 - [2. Background](#2-background)
@@ -160,7 +162,7 @@ GPC is not necessarily intended to invoke every new privacy right in every juris
 
 It is not considered standard for W3C specifications to present user interface recommendations or restrictions. User interfaces are the domain of user-agents who, being closest to the user, best understand how their users interpret and react to the underlying functionality. For GPC, some user-agents may present themselves as privacy-focused technology, in which case it may make sense for the signal to be defaulted to on at all times, which, for example, is supported in California and Colorado for privacy-focused technology. Some user-agents may be generic, with no expectation for people setting defaults. Some user-agents may present GPC in different formats and devices and necessitate unique user interface requirements.
 
-This explainer presents examples of user-agent user interfaces for GPC as an aid to adopters who are interested in or required to implement GPC as to how it can be presented.
+This Guide presents examples of user-agent user interfaces for GPC as an aid to adopters who are interested in or required to implement GPC as to how it can be presented.
 
 ### 6.1 Example Presentations of User-agent Level UI
 
