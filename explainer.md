@@ -125,7 +125,14 @@ The regulations also set up a "registry" of legally binding signals under the la
 
 #### 4.1.3 Other states that explicitly provide for universal opt-out mechanisms
 
-In addition to California and Colorado, at least nine other states have passed comprehensive privacy legislation that explicitly provides for the operation of global privacy signals that must be treated as legally binding opt-outs under the law. Most of these state laws are broadly similar to the text of the Colorado Privacy Act, in that they apply to both sales and cross-context targeted advertising, and have similar provisions requiring, for example, that the signals reflect the intent of the user and that they not unfairly disadvantage other controllers. However, they also differ in a number of key ways. As one example, states like Texas and Nebraska provide that specific global opt-out signals will be deemed valid if they are legally recognized in another state jurisdiction. Most of these states do not provide for rulemaking from the Attorney General to issue more clarity on the operation of the global opt-out provisions, though regulators may offer more informal guidance through FAQs (as California originally did) or may bring enforcement actions to clarify the boundaries of the law.
+In addition to California and Colorado, at least ten other states have passed comprehensive privacy legislation that explicitly provides for the operation of global privacy signals that must be treated as legally binding opt-outs under the law. Most of these state laws are broadly similar to the text of the Colorado Privacy Act, in that they apply to both sales and cross-context targeted advertising, and have similar provisions requiring, for example, that the signals reflect the intent of the user and that they not unfairly disadvantage other controllers.
+
+However, they also differ in a number of key ways. As one example, states like Texas and Nebraska provide that specific global opt-out signals will be deemed valid if they are legally recognized in another state jurisdiction. Most of these states do not provide for rulemaking from the Attorney General to issue more clarity on the operation of the global opt-out provisions, though regulators may offer more informal guidance through FAQs (as California originally did) or may bring enforcement actions to clarify the boundaries of the law.
+
+Two states --- [Connecticut](https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act) and
+[New Jersey](https://www.njconsumeraffairs.gov/ocp/Pages/NJ-Data-Privacy-Law-FAQ.aspx) --- have issued FAQs explicity stating
+that GPC should be treated as a univeral opt-out under their laws (New Jersey's universal opt-out provision goes into effect
+on July 15, 2025).
 
 #### 4.1.4 States that have privacy law that is silent on universal opt-out mechanisms
 
