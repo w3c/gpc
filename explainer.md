@@ -1,4 +1,4 @@
-# Global Privacy Control (GPC) Explainer
+# Global Privacy Control (GPC) Legal and Implementation Considerations Guide
 
 Editors:
 [Aram Zucker-Scharff](https://github.com/AramZS)
@@ -8,6 +8,8 @@ Editors:
 ## 0. tl;dr
 
 Global Privacy Control (GPC) is a proposed specification designed to allow Internet users to notify businesses of their preference to not have their personal information sold or shared, or used for targeted advertising. It consists of a setting or extension in the user’s browser that provides a mechanism that websites can use to indicate they support the specification.
+
+This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice. 
 
 - [1. Draft Specification](#1-draft-specification)
 - [2. Background](#2-background)
@@ -126,7 +128,14 @@ The regulations also set up a "registry" of legally binding signals under the la
 
 #### 4.1.3 Other states that explicitly provide for universal opt-out mechanisms
 
-In addition to California and Colorado, at least nine other states have passed comprehensive privacy legislation that explicitly provides for the operation of global privacy signals that must be treated as legally binding opt-outs under the law. Most of these state laws are broadly similar to the text of the Colorado Privacy Act, in that they apply to both sales and cross-context targeted advertising, and have similar provisions requiring, for example, that the signals reflect the intent of the user and that they not unfairly disadvantage other controllers. However, they also differ in a number of key ways. As one example, states like Texas and Nebraska provide that specific global opt-out signals will be deemed valid if they are legally recognized in another state jurisdiction. Most of these states do not provide for rulemaking from the Attorney General to issue more clarity on the operation of the global opt-out provisions, though regulators may offer more informal guidance through FAQs (as California originally did) or may bring enforcement actions to clarify the boundaries of the law.
+In addition to California and Colorado, at least ten other states have passed comprehensive privacy legislation that explicitly provides for the operation of global privacy signals that must be treated as legally binding opt-outs under the law. Most of these state laws are broadly similar to the text of the Colorado Privacy Act, in that they apply to both sales and cross-context targeted advertising, and have similar provisions requiring, for example, that the signals reflect the intent of the user and that they not unfairly disadvantage other controllers.
+
+However, they also differ in a number of key ways. As one example, states like Texas and Nebraska provide that specific global opt-out signals will be deemed valid if they are legally recognized in another state jurisdiction. Most of these states do not provide for rulemaking from the Attorney General to issue more clarity on the operation of the global opt-out provisions, though regulators may offer more informal guidance through FAQs (as California originally did) or may bring enforcement actions to clarify the boundaries of the law.
+
+Two states --- [Connecticut](https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act) and
+[New Jersey](https://www.njconsumeraffairs.gov/ocp/Pages/NJ-Data-Privacy-Law-FAQ.aspx) --- have issued FAQs explicity stating
+that GPC should be treated as a univeral opt-out under their laws (New Jersey's universal opt-out provision goes into effect
+on July 15, 2025).
 
 #### 4.1.4 States that have privacy law that is silent on universal opt-out mechanisms
 
@@ -154,7 +163,7 @@ GPC is not necessarily intended to invoke every new privacy right in every juris
 
 It is not considered standard for W3C specifications to present user interface recommendations or restrictions. User interfaces are the domain of user-agents who, being closest to the user, best understand how their users interpret and react to the underlying functionality. For GPC, some user-agents may present themselves as privacy-focused technology, in which case it may make sense for the signal to be defaulted to on at all times, which, for example, is supported in California and Colorado for privacy-focused technology. Some user-agents may be generic, with no expectation for people setting defaults. Some user-agents may present GPC in different formats and devices and necessitate unique user interface requirements.
 
-This explainer presents examples of user-agent user interfaces for GPC as an aid to adopters who are interested in or required to implement GPC as to how it can be presented.
+This Guide presents examples of user-agent user interfaces for GPC as an aid to adopters who are interested in or required to implement GPC as to how it can be presented.
 
 ### 6.1 Example Presentations of User-agent Level UI
 
@@ -196,6 +205,8 @@ If GPC is not turned on by default, there should be a control that is accessible
 If the user-agent makes the GPC setting visible when active, it should retain individuals’ privacy choices when they turn off GPC for a specific site.
 
 User-agents should not challenge people with a request to set GPC in either mode beyond initial setup. Per-domain settings of GPC should be up to an individual to engage with, not pushed via a notification, modal, pop-up, or similar interactive element.
+
+Many user-agents offer a "private browsing" or "incognito" mode that provides heightened privacy protections when in use, such as not retaining local history or cookies at the end of a session. Depending upon how that private mode is described to users, the developers of the user-agent may deem it appropriate to send GPC to websites while this mode is activated as a means of offering additional privacy protection. While browser developers make decide that additional consent or user prompting is unnecessary before sending GPC in such cases, they should be transparent about the fact that in "private" or "incognito" mode, GPC will be sent.
 
 ### 6.3 Adopting on Your Website
 
