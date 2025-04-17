@@ -101,7 +101,8 @@
       <p>
         This document defines a signal, transmitted over HTTP and through the DOM, that conveys a
         person's request to websites and services to not sell or share their personal information with
-        third parties. This standard is intended to work with existing and upcoming legal frameworks
+        third parties, or to have their data used for cross-organization ad targeting.
+        This standard is intended to work with existing and upcoming legal frameworks
         that render such requests enforceable.
       </p>
     </section>
@@ -115,7 +116,7 @@
         services. While this architecture can be used in the service of better Web experiences,
         it can also be abused to violate privacy ([[?privacy-principles]]). While data can be shared
         with service providers for limited operational purposes, it can also be shared with third
-        parties or used for behavioral targeting in ways that many users find objectionable.
+        parties or used for [=cross-organization ad targeting=] in ways that many users find objectionable.
       </p>
       <p>
         Several different legal frameworks have been proposed or enacted by jurisdictions around
@@ -144,8 +145,8 @@
         difficulty of scaling user choices by providing a way to universally signal to all website
         publishers, through an HTTP header
         or the DOM, a person's assertion of their applicable rights to prevent the sale of their data,
-        the sharing of their data with third parties, and the use of their data for cross-site targeted
-        advertising. This signal allows users to take advantage of specific provisions in some of these
+        the sharing of their data with third parties, and the use of their data for [=cross-organization targeted
+        advertising=]. This signal allows users to take advantage of specific provisions in some of these
         opt-out based laws, such as, for example, the provisions relating to "opt out preferences
         signals" in the California Consumer Privacy Act. [[?CCPA-REGULATIONS]].
       </p>
@@ -161,7 +162,7 @@
       <p>
         A <dfn>do-not-sell-or-share interaction</dfn> is an interaction with a website in which the
         person is requesting that their data not be sold to or shared with any party other than the
-        one the person intends to interact with, or to have their data used for cross-site ad targeting,
+        one the person intends to interact with, or to have their data used for [=cross-organization ad targeting=],
         except as permitted by law.
       </p>
       <p>
@@ -171,6 +172,12 @@
         because this setting matches the most common expectations of that tool's users).
         When set, this [=preference=] indicates that the person expects to browse the Web with
         [=do-not-sell-or-share interactions=].
+      </p>
+      <p>
+        <dfn data-lt="cross-organization ad targeting|">Cross-organization targeted
+        advertising</dfn> means showing a person advertisements, where the advertisement is selected
+        based on data about that person that was gathered from organizations beyond just the one
+        they're interacting with when they see the advertisement.
       </p>
     </section>
     <section>
@@ -412,7 +419,7 @@
         GPC was originally created to take advantage of new opt-out privacy laws in the United State.
         Starting with the enactment of the California Consumer Privacy Act in 2018, several U.S. states
         have passed privacy laws that give consumers the legal right to opt out of the sale or share of
-        their data, or the use of their data for cross-context targeted advertising. Many of those state
+        their data, or the use of their data for [=cross-organization targeted advertising=]. Many of those state
         laws make explicit provision for the exercise of those rights through universal opt-out mechanisms
         such as the GPC. At least four states have specifically identified GPC as a valid means to exercise
         legal opt-out rights. A minority of states provide for rulemaking procedures to allow regulators
@@ -430,7 +437,7 @@
       </p>
       <p>
         Other US state privacy laws, such as those in Virginia and Utah, give consumers new opt-out
-        rights around data sales and targeted advertising but are silent on the legal effect of
+        rights around data sales and [=cross-organization targeted advertising=] but are silent on the legal effect of
         global opt-out signals. Regulators enforcing those statutes may determine that a user
         activating a signal such as GPC may be sufficient to legally exercise opt-out rights in
         those jurisdictions.
@@ -457,7 +464,7 @@
           preference for the Global Privacy Control value. While studies have shown that people do not
           want their data sold or shared, some jurisdictions have enacted "opt-out" legal frameworks
           where consumers have to take an affirmative action to express a [=preference=] to limit data
-          sharing of the use of their data for targeted advertising.
+          sharing or the use of their data for [=cross-organization targeted advertising=].
         </p>
         <p>
           Different jurisdictions have different prerequisites before a platform can enable a universal
