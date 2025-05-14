@@ -143,7 +143,7 @@
         This specification is designed for this last category of laws and addresses the problem of the
         difficulty of scaling user choices by providing a way to universally signal to all website
         publishers, through an HTTP header
-        or the DOM, a person's assertion of their applicable rights to prevent the sale of their data,
+        or the DOM, a person's assertion of their applicable rights to prevent the sale of their data
         and the sharing of their data with third parties.
         This signal allows users to take advantage of specific provisions in some of these
         opt-out based laws, such as, for example, the provisions relating to "opt out preferences
@@ -396,10 +396,11 @@
       <h2>Legal Effects</h2>
       <p>
         The GPC signal was designed to allow users to take advantage of legal rights to stop certain
-        sale or sharing of their data. However, some jurisdictions have decided to also use it as a
-        prohibition against cross-site targeted advertising, even when such advertising does not
-        involve the selling or sharing of data. As such, the sending and receipt of a GPC signal may
-        have a variety of legal effects, depending on factors such as the location of the individual sending the
+        sale or sharing of their data. Some jurisdictions phrase this as opting out of
+        targeting advertisements using data that was shared between non-affiliated companies,
+        and that still falls into the opt out of sharing in general.
+        As such, the sending and receipt of a GPC signal may have a variety of legal effects,
+        depending on factors such as the location of the individual sending the
         signal, the scope of the applicable law, as well as any separate agreement between the
         recipient of the signal and the individual. For additional details on legal effects, 
         <a href="https://w3c.github.io/gpc/explainer" target="_blank">consult the Legal and
@@ -432,7 +433,7 @@
       </p>
       <p>
         Other US state privacy laws, such as those in Virginia and Utah, give consumers new opt-out
-        rights around data sales but are silent on the legal effect of
+        rights around data sales and sharing but are silent on the legal effect of
         global opt-out signals. Regulators enforcing those statutes may determine that a user
         activating a signal such as GPC may be sufficient to legally exercise opt-out rights in
         those jurisdictions.
