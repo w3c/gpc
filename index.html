@@ -62,7 +62,7 @@
         shortName: 'gpc',
         group: "wg/privacy",
         github: 'w3c/gpc',
-        xref: ['html'],
+        xref: ['html', 'webdriver'],
         localBiblio: {
           'CCPA-AG-FINAL-STATEMENT': {
             title: 'California Attorney General CCPA Final Statement of Reasons',
@@ -178,7 +178,7 @@
       <section>
         <h3>Expression Format</h3>
         <p>
-          A Global Privacy Control [=preference=] should be conveyed for all HTTP requests (in the form 
+          A Global Privacy Control [=preference=] should be conveyed for all HTTP requests (in the form
           of the HTTP header) and all websites (in the form of the Web API property).
         </p>
         <p>
@@ -508,6 +508,71 @@
       <p>
         There are no known security impacts of the features in this specification.
       </p>
+    </section>
+    <section>
+      <h2 id="automation">Automation</h2>
+        For the purposes of user-agent automation and application testing, this document defines
+        the following [=extension command|extension commands=]. [[WebDriver]]
+
+      <h3 id="set-global-privacy-control">Set Global Privacy Control</h3>
+      <table>
+          <tbody>
+          <tr>
+              <th>HTTP Method</th>
+              <th>URI Template</th>
+          </tr>
+          <tr>
+              <td>POST</td>
+              <td>/session/{session id}/privacy</td>
+          </tr>
+          </tbody>
+      </table>
+
+      <p>The <dfn class="export">Set Global Privacy Control</dfn> [=extension command=] modifies the
+      [=do-not-sell-or-share preference=] for the current session.
+
+      <p>The [=remote end steps=], given <var>session</var>, <var>URL variables</var> and
+      <var>parameters</var> are:
+
+      <ol>
+        <li><p>Let |gpc| be the property `gpc` of |parameters|.
+        <li><p>If |gpc| is undefined or is not a boolean, return error with error code invalid argument.
+        <li><p>Record the user's [=preference=] for this |session| such that the browser will perform
+        [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=] if |gpc| is true and
+        will not perform [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=] if
+        |gpc| is false.
+        <li><p>Return [=success=] with data `null`.
+      </ol>
+
+      <h3 id="set-global-privacy-control">Get Global Privacy Control</h3>
+      <table>
+          <tbody>
+          <tr>
+              <th>HTTP Method</th>
+              <th>URI Template</th>
+          </tr>
+          <tr>
+              <td>GET</td>
+              <td>/session/{session id}/privacy</td>
+          </tr>
+          </tbody>
+      </table>
+
+      <p>The <dfn class="export">Get Global Privacy Control</dfn> [=extension command=] returns the
+      [=do-not-sell-or-share preference=] for the current session.
+
+      <p>The [=remote end steps=], given <var>session</var>, <var>URL variables</var> and
+      <var>parameters</var> are:
+
+      <ol>
+        <li><p>If the user's [=preference=] for this |session|  issuch that the browser will
+          perform [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=], let
+          |gpc| be true.
+        <li><p>Otherwise, let |gpc| be false.
+        <li><p>Let |result| be a JSON [=Object=] with property "<code>gpc</code>" set to |gpc|.
+        <li><p>Return [=success=] with data `null`.
+      </ol>
+
     </section>
     <section id="conformance"></section>
     <section class="appendix">
