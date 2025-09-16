@@ -7,7 +7,6 @@
     <script class="remove">
       var respecConfig = {
         specStatus: 'ED',
-        xref: ['html'],
         editors: [
           {
             name: 'Sebastian Zimmeck',
@@ -62,7 +61,7 @@
         shortName: 'gpc',
         group: "wg/privacy",
         github: 'w3c/gpc',
-        xref: ['html', 'webdriver'],
+        xref: ['html', 'webdriver', 'privacy-principles'],
         localBiblio: {
           'CCPA-AG-FINAL-STATEMENT': {
             title: 'California Attorney General CCPA Final Statement of Reasons',
@@ -113,8 +112,8 @@
         the one with which a person choses to interact. This result is a consequence of the
         increasing complexity of Web technology and of the division of labor between different
         services. While this architecture can be used in the service of better Web experiences,
-        it can also be abused to violate privacy ([[?privacy-principles]]). While data can be shared
-        with service providers for limited operational purposes, it can also be shared or used for
+        it can also be abused to violate [=privacy=] ([[?privacy-principles]]). While data can be shared
+        with [=service providers=] for limited operational purposes, it can also be shared or used for
         behavioral targeting in ways that many users find objectionable.
       </p>
       <p>
@@ -125,10 +124,10 @@
       </p>
       <p>
         Some laws and proposals grant users the right to request that their privacy be
-        protected, including "opt out" requests that their data not be sold or shared beyond the
+        protected, including "[=opt out=]" requests that their data not be sold or shared beyond the
         business with which they intend to interact. Requiring that people manually express their
         rights for each and every site they visit is, however, impractical, and an imposition of
-        "privacy labor" on people ([[?privacy-principles]]).
+        "[=privacy labor=]" on people ([[?privacy-principles]]).
       </p>
       <p>
         This specification is designed for this last category of laws and addresses the problem of the
@@ -137,7 +136,7 @@
         or the DOM, a person's assertion of their applicable rights to prevent the sale of their data,
         the sharing of their data with third parties, and the use of their data for cross-context targeted
         advertising. This signal allows users to take advantage of specific provisions in some of these
-        opt-out based laws, such as, for example, the provisions relating to "opt out preferences
+        [=global opt-out=] based laws, such as, for example, the provisions relating to "opt out preferences
         signals" in the California Consumer Privacy Act to stop the sale of sharing of personal information,
         [[?CCPA-REGULATIONS]], or similar provisions for "universal opt-out mechanisms" in laws in Colorado
         and other states to allow users to opt out of the sale of their information or its use for
@@ -147,7 +146,9 @@
         The specification should not be interpreted as an endorsement of the opt-out model of
         regulation — or of cross-context tracking more broadly — or a rejecion of other models based on
         consent or data minimization. It is instead designed to make it possible to exercise the affirmative rights
-        granted to users in certain jurisdictions.
+        granted to users in certain jurisdictions and intended to work with different legal architectures,
+        including those that support a [=right to withdraw consent=] or [=right to object=] to data
+        processing.
       </p>
     </section>
     <section>
@@ -156,7 +157,8 @@
         A <dfn>do-not-sell-or-share interaction</dfn> is an interaction with a website in which the
         person is requesting that their data not be sold to or shared with any party other than the
         one the person intends to interact with, or to have their data used for cross-context ad targeting,
-        except as permitted by law.
+        except as permitted by law. In terms of the W3C's [[[privacy-principles]]], the person is
+        requesting that there be only one [=data controller=].
       </p>
       <p>
         A <dfn data-lt="preference">do-not-sell-or-share preference</dfn> is when a person requests
@@ -182,7 +184,7 @@
         <p>
           In the absence of regulatory, legal, or other requirements, websites MAY interpret an
           expressed Global Privacy Control [=preference=] as they find most appropriate for the given
-          person, particularly as considered in light of the person's privacy expectations, context, and
+          person, particularly as considered in light of the person's privacy expectations, [=context=], and
           cultural circumstances. Likewise, websites might make use of other [=preference=] information
           outside the scope of this protocol, such as site-specific person [=preferences=] or third-party
           registration services, to inform or adjust their behavior when no explicit [=preference=] is
@@ -401,6 +403,12 @@
         For example, the use of the GPC signal by an individual will be intended to communicate the
         individual's intention to invoke the following rights, as applicable:
       </p>
+      <p>
+        Regulators and implementers seeking to understand the best way to apply the GPC signal in a
+        given jurisdiction are invited to consult the semantics of [=global opt-out=] mechanisms
+        detailed in the W3C's [[[privacy-principles]]] as the specifics may be unfamiliar to
+        people less familiar with expectations placed on [=user agents=] on the web.
+      </p>
       <h3>United States Privacy Law</h3>
       <p>
         GPC was originally created to take advantage of new opt-out privacy laws in the United State.
@@ -432,16 +440,16 @@
       <p>
         However, GPC is not necessarily intended to invoke every new privacy right in every
         jurisdiction. For example, GPC is not intended to globally invoke data deletion rights on
-        every website visited by the user. GPC is also not intended to limit a first party’s use of
-        personal information within the first-party context (such as a publisher targeting ads to a
+        every website visited by the user. GPC is also not intended to limit a [=first party=]’s use of
+        personal information within the first-party [=context=] (such as a publisher targeting ads to a
         user on its website based on that user’s previous activity on that same site).
       </p>
       <p>
         Given the complexities of existing consent frameworks, publishers who accept the GPC signal
         should disclose how they treat the GPC signal in that jurisdiction and how they deal with
         conflicts between the signal and other specific privacy choices that the person has already
-        made directly with the publisher, including instances where third party sharing may be
-        permitted such as sharing to service providers/processors, sharing at law or at the
+        made directly with the publisher, including instances where [=third party=] sharing may be
+        permitted such as sharing to [=service providers=]/processors, sharing at law or at the
         direction of the individual.
       </p>
       <section>
