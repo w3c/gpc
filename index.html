@@ -395,7 +395,8 @@
         sharing or processing of their data. As such, the sending and receipt of a GPC signal may
         have legal effects, depending on factors such as the location of the individual sending the
         signal, the scope of the applicable law, as well as any separate agreement between the
-        recipient of the signal and the individual. For additional details on legal effects,
+        recipient of the signal and the individual. However, GPC is not necessarily intended to invoke
+        every new privacy right in every jurisdiction. For additional details on legal effects, 
         <a href="https://w3c.github.io/gpc/explainer" target="_blank">consult the Legal and
         Implementation Considerations Guide</a>.
       </p>
@@ -455,17 +456,22 @@
       <section>
         <h2>User Interface Language</h2>
         <p>
+          This document does not specify what information must be presented to a user before activating
+          GPC. When a user agent promotes a privacy feature or offers a privacy setting, it can make the
+          determination if it is appropriate to send GPC based on what has been disclosed to the user.
+          
           User agents SHOULD strive to represent what the user agent best believes to be the person's
           preference for the Global Privacy Control value. While studies have shown that most people do not
           want their data sold or shared, some jurisdictions have enacted "opt-out" legal frameworks
           where consumers have to take an affirmative action to express a [=preference=] to limit data
-          sharing of the use of their data for cross-organization targeted advertising.
+          sharing or the use of their data for targeted advertising. GPC is designed to let users easily
+          take advantage of these laws.
         </p>
         <p>
           Different jurisdictions have different prerequisites before a platform can enable a universal
-          opt-out. Many US states say that a user agent may not send a universal opt-out signal by "default,"
-          though at least one state has said that selecting a privacy focused user agent is a sufficient
-          indicator of user intent.
+          opt-out like GPC. Many US states say that a user agent may not send a universal opt-out signal by
+          "default," though at least one state has said that selecting a privacy focused user agent is a
+          sufficient indicator of user intent.
         </p>
         <p>
           Different jurisdictions may also have different rules for when companies can override or disregard
