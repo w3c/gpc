@@ -11,27 +11,29 @@ Global Privacy Control (GPC) is a proposed specification designed to allow Inter
 
 This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well as a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice. 
 
-- [1. Draft Specification](#1-draft-specification)
-- [2. Background](#2-background)
-- [3. Solution](#3-solution)
-  - [3.1 Header](#31-header)
-  - [3.2 Navigator Object](#32-navigator-object)
-  - [3.3 Signal Semantics](#33-signal-semantics)
-- [4. Legal Effects](#4-legal-effects)
-  - [4.1 GPC in the US](#41-gpc-in-the-us)
-    - [4.1.1 The California Consumer Privacy Act](#411-the-california-consumer-privacy-act)
-    - [4.1.2 The Colorado Privacy Act](#412-the-colorado-privacy-act)
-    - [4.1.3 Other states that explicitly provide for universal opt-out mechanisms](#413-other-states-that-explicitly-provide-for-universal-opt-out-mechanisms)
-    - [4.1.4 States that have privacy law that is silent on universal opt-out mechanisms](#414-states-that-have-privacy-law-that-is-silent-on-universal-opt-out-mechanisms)
-    - [4.1.5 Federal law and states without dedicated privacy laws](#415-federal-law-and-states-without-dedicated-privacy-laws)
-  - [4.2 GPC outside the US](#42-gpc-outside-the-us)
-- [5. Additional Interpretation Options and Explanations](#5-additional-interpretation-options-and-explanations)
-- [6. User Experience Considerations and Recommendations](#6-user-experience-considerations-and-recommendations)
-  - [6.1 Example Presentations of User-agent Level UI](#61-example-presentations-of-user-agent-level-ui)
-  - [6.2 User-agents](#62-user-agents)
-  - [6.3 Adopting on Your Website](#63-adopting-on-your-website)
-  - [6.4 Consent to Disregard a Universal GPC Signal](#64-consent-to-track-notwithstanding-a-universal-gpc-signal)
-- [7. Alternatives Considered](#7-alternatives-considered)
+- [Global Privacy Control (GPC) Legal and Implementation Considerations Guide](#global-privacy-control-gpc-legal-and-implementation-considerations-guide)
+  - [0. tl;dr](#0-tldr)
+  - [1. Draft Specification](#1-draft-specification)
+  - [2. Background](#2-background)
+  - [3. Solution](#3-solution)
+    - [3.1 Header](#31-header)
+    - [3.2 Navigator Object](#32-navigator-object)
+    - [3.3 Signal Semantics](#33-signal-semantics)
+    - [3.4 GPC Support Resource](#34-gpc-support-resource)
+  - [4. Legal Effects](#4-legal-effects)
+    - [4.1 GPC in the US](#41-gpc-in-the-us)
+      - [4.1.1 The California Consumer Privacy Act](#411-the-california-consumer-privacy-act)
+      - [4.1.2 The Colorado Privacy Act](#412-the-colorado-privacy-act)
+      - [4.1.3 Other states that explicitly provide for universal opt-out mechanisms](#413-other-states-that-explicitly-provide-for-universal-opt-out-mechanisms)
+      - [4.1.4 States that have privacy law that is silent on universal opt-out mechanisms](#414-states-that-have-privacy-law-that-is-silent-on-universal-opt-out-mechanisms)
+      - [4.1.5 Federal law and states without dedicated privacy laws](#415-federal-law-and-states-without-dedicated-privacy-laws)
+    - [4.2 GPC outside the US](#42-gpc-outside-the-us)
+  - [5. User Experience Considerations and Recommendations](#5-user-experience-considerations-and-recommendations)
+    - [5.1 Example Presentations of User-agent Level UI](#51-example-presentations-of-user-agent-level-ui)
+    - [5.2 User-agents](#52-user-agents)
+    - [5.3 Adopting on Your Website](#53-adopting-on-your-website)
+    - [5.4 Consent to Disregard a Universal GPC Signal](#54-consent-to-disregard-a-universal-gpc-signal)
+  - [6. Alternatives Considered](#6-alternatives-considered)
 
 ## 1. Draft Specification
 
@@ -152,13 +154,13 @@ Mauritius, an African country, has the Data Protection Act (DPA). The DPA was in
 
 The Privacy Commissioner of Bermuda has also [written](https://www.privacy.bm/post/global-privacy-control-interoperability-in-action) that GPC may ultimately be interpreted to exercise legal rights under its Personal Information and Privacy Act.
 
-## 6. User Experience Considerations and Recommendations
+## 5. User Experience Considerations and Recommendations
 
 It is not considered standard for W3C specifications to present user interface recommendations or restrictions. User interfaces are the domain of user-agents who, being closest to the user, best understand how their users interpret and react to the underlying functionality. For GPC, some user-agents may present themselves as privacy-focused technology, in which case it may make sense for the signal to be defaulted to on, which, for example, is supported in California and Colorado for privacy-focused technology. Some user-agents may be generic, with no expectation for people setting defaults. Some user-agents may present GPC in different formats and devices and necessitate unique user interface requirements.
 
 This Guide presents examples of user-agent user interfaces for GPC as an aid to adopters who are interested in or required to implement GPC as to how it can be presented.
 
-### 6.1 Example Presentations of User-agent Level UI
+### 5.1 Example Presentations of User-agent Level UI
 
 The following examples come from the [OptMeowt browser extension](https://github.com/privacy-tech-lab/gpc-optmeowt), which is developed at the [privacy-tech-lab](https://privacytechlab.org/) at Wesleyan University. We also show how Mozilla surfaces the GPC setting in Firefox. These examples are shown to illustrate. They are not meant as a comprehensive set of UIs for GPC.
 
@@ -187,7 +189,7 @@ A user interface can show what response is at `https://{yourwebsite.com}/.well-k
 ![OptMeowt GPC Response](assets/images/OptMeowt_GPC_Response.png)
 An example of how GPC responses can be surfaced (OptMeowt).
 
-### 6.2 User-agents
+### 5.2 User-agents
 
 The above examples are from an extension in a web browser. User-agents should implement similar interface conventions. The authors of this document recommend that user-gents have some way to display to people the state of their GPC signal when it is on during the course of regular interaction with the site instead of putting it behind a settings page.
 
@@ -201,7 +203,7 @@ User-agents should not challenge people with a request to set GPC in either mode
 
 Many user-agents offer a "private browsing" or "incognito" mode that provides heightened privacy protections when in use, such as not retaining local history or cookies at the end of a session. Depending upon how that private mode is described to users, the developers of the user-agent may deem it appropriate to send GPC to websites while this mode is activated as a means of offering additional privacy protection. While browser developers make decide that additional consent or user prompting is unnecessary before sending GPC in such cases, they should be transparent about the fact that in "private" or "incognito" mode, GPC will be sent.
 
-### 6.3 Adopting on Your Website
+### 5.3 Adopting on Your Website
 
 Given the complexities of existing privacy choice and consent frameworks, sites that implement GPC should disclose how they treat it in any jurisdiction for which they adopt it and how they deal with conflicts between a GPC signal and other specific privacy choices that an individual has already made directly with the site, including instances where third party sharing may be permitted, such as sharing to service providers/processors or at the direction of the individual.
 
@@ -221,13 +223,13 @@ Setting the USPAPI for propagating GPC downstream.
 
 Generally website developers should consider GPC signals to be identical to a user flipping the opt out switch on their website and take action accordingly.
 
-### 6.4 Consent to Disregard a Universal GPC Signal
+### 5.4 Consent to Disregard a Universal GPC Signal
 
 A do-not-sell-or-share preference is when a person generally requests of all website publishers that their data "not be sold or shared.” However, it is possible that a particular publisher would seek to enter into a separate agreement with a user permitting that publisher to sell or share the user’s data notwithstanding the general preference. The GPC spec does not provide for a mechanism or syntax to negotiate or indicate such an exception, so any user consent to tracking would be communicated apart from the GPC signal.
 
 When and how a separate agreement to disregard GPC requests overrides the legal status of the signal will be a matter of local law. Some jurisdictions that have explicitly endorsed GPC as a legally binding opt-out signal have also placed limitations on how companies can request permission to track despite the general signal. One rationale for such limitations is that without some restrictions, users with GPC enabled could be inundated with countless requests for exceptions to track as they browse the internet — undermining the fundamental purpose of offering a simple, binary universal opt-out tool. Both California and Colorado, for example, constrain how overrides for universal opt-out signals like GPC can be requested, including rules against retaliating against users for exercising privacy rights, conditions for valid consent, and limiting how frequently companies can ask consumers to reconsider opt-out requests.
 
-## 7. Alternatives Considered
+## 6. Alternatives Considered
 
 The authors of GPC considered other options for how the signal would work. The current state of privacy controls across the world is varied. The authors have experience both working on and implementing these more complex controls and found that people generally consider them to be unnecessarily complex. If people intend to make privacy choices, they almost always intend to exercise their rights broadly, e.g., opting out from all sites they visit, no matter how many individual controls exist. More recent laws have also adopted this understanding and moved towards requiring universal or significantly fewer degrees of control. GPC reflects this understanding of people’s privacy choices and, therefore, works in support of these laws.
 
