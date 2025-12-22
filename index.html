@@ -120,14 +120,14 @@
       <p>
         Several different legal frameworks have been proposed or enacted by jurisdictions around
         the world to address this concern. Some models rely upon user consent for tracking. Other
-        models based on the principle of data minimization simply prohibit certain data sharing or 
+        models based on the principle of data minimization simply prohibit certain data sharing or
         data processing entirely.
       </p>
       <p>
         Some laws and proposals grant users the right to request that their privacy be
         protected, including "opt out" requests that their data not be sold or shared beyond the
         business with which they intend to interact. Requiring that people manually express their
-        rights for each and every site they visit is, however, impractical, and an imposition of 
+        rights for each and every site they visit is, however, impractical, and an imposition of
         "privacy labor" on people ([[?privacy-principles]]).
       </p>
       <p>
@@ -147,9 +147,9 @@
         However, while the Global Privacy Control is designed to allow users to express a preference to opt out
         of sharing and cross-context targeted advertising, the control is not intended to exercise every possible
         privacy right, nor even every right to opt out of advertising or ad targeting. GPC is not designed to
-        exercise deletion rights, for example. GPC is also not designed to address [=same site=] data collection and
-        [=same site=] ad targeting. For more details, see the
-        <a href="https://w3c.github.io/gpc/explainer" target="_blank">Legal and Implementation Considerations Guide</a>
+        exercise deletion rights, for example. GPC is also not designed to address data collection or ad targeting
+        within the same <a data-link-type="dfn" href="https://www.w3.org/TR/privacy-principles/#dfn-context">context</a>. For more details, see the
+        <a href="https://w3c.github.io/gpc/explainer" target="_blank">Legal and Implementation Considerations Guide</a>.
       </p>
       <p>
         The specification should not be interpreted as an endorsement of the opt-out model of
@@ -401,7 +401,7 @@
         have legal effects, depending on factors such as the location of the individual sending the
         signal, the scope of the applicable law, as well as any separate agreement between the
         recipient of the signal and the individual. However, GPC is not necessarily intended to invoke
-        every new privacy right in every jurisdiction. For additional details on legal effects, 
+        every new privacy right in every jurisdiction. For additional details on legal effects,
         <a href="https://w3c.github.io/gpc/explainer" target="_blank">consult the Legal and
         Implementation Considerations Guide</a>.
       </p>
@@ -458,7 +458,7 @@
           This document does not specify what information must be presented to a user before activating
           GPC. When a user agent promotes a privacy feature or offers a privacy setting, it can make the
           determination if it is appropriate to send GPC based on what has been disclosed to the user.
-          
+
           User agents SHOULD strive to represent what the user agent best believes to be the person's
           preference for the Global Privacy Control value. While studies have shown that most people do not
           want their data sold or shared, some jurisdictions have enacted "opt-out" legal frameworks
@@ -503,10 +503,10 @@
       <p>
         Exposing a user's preference (in the HTTP header field or {{Window/navigator}} object)
         potentially divides users into two groups in a way that might increase the information
-        available for browser or device fingerprinting. This additional information is available 
-        unless the signal perfectly correlates with other signals or is turned on in a 
-        non-configurable setting. Thus, depending on the implementation, the GPC signal may impose 
-        a privacy cost, though, one intended to be justified by the privacy benefit of sending the 
+        available for browser or device fingerprinting. This additional information is available
+        unless the signal perfectly correlates with other signals or is turned on in a
+        non-configurable setting. Thus, depending on the implementation, the GPC signal may impose
+        a privacy cost, though, one intended to be justified by the privacy benefit of sending the
         signal.
       </p>
     </section>
