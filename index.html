@@ -119,7 +119,7 @@
       <p>
         Several different legal frameworks have been proposed or enacted by jurisdictions around
         the world to address this concern. Some models rely upon user consent for tracking. Other
-        models based on the principle of data minimization simply prohibit certain data sharing or
+        models based on the principle of data minimization simply prohibit certain data sharing or 
         data processing entirely.
       </p>
       <p>
@@ -146,9 +146,7 @@
         The specification should not be interpreted as an endorsement of the opt-out model of
         regulation — or of cross-context tracking more broadly — or a rejecion of other models based on
         consent or data minimization. It is instead designed to make it possible to exercise the affirmative rights
-        granted to users in certain jurisdictions and intended to work with different legal architectures,
-        including those that support a [=right to withdraw consent=] or [=right to object=] to data
-        processing.
+        granted to users in certain jurisdictions.
       </p>
     </section>
     <section>
@@ -400,7 +398,7 @@
         have legal effects, depending on factors such as the location of the individual sending the
         signal, the scope of the applicable law, as well as any separate agreement between the
         recipient of the signal and the individual. However, GPC is not necessarily intended to invoke
-        every new privacy right in every jurisdiction. For additional details on legal effects,
+        every new privacy right in every jurisdiction. For additional details on legal effects, 
         <a href="https://w3c.github.io/gpc/explainer" target="_blank">consult the Legal and
         Implementation Considerations Guide</a>.
       </p>
@@ -430,7 +428,7 @@
       <h3>Other Jurisdictions and Privacy Rights</h3>
       <p>
         GPC could potentially be used to indicate rights in other jurisdictions as well. For example, the
-        GDPR affords data subjects the right to limit the sharing of personal information under
+        GDPR potentially affords data subjects the right to limit the sharing of personal information under
         Articles 7 and 21. Many other countries around the world have adopted affirmative privacy
         legislation — often modeled on the GDPR; a regulator in one of those countries could determine that
         GPC invokes a legal right that requires some response from a recipient.
@@ -463,7 +461,7 @@
           This document does not specify what information must be presented to a user before activating
           GPC. When a user agent promotes a privacy feature or offers a privacy setting, it can make the
           determination if it is appropriate to send GPC based on what has been disclosed to the user.
-
+          
           User agents SHOULD strive to represent what the user agent best believes to be the person's
           preference for the Global Privacy Control value. While studies have shown that most people do not
           want their data sold or shared, some jurisdictions have enacted "opt-out" legal frameworks
@@ -508,10 +506,10 @@
       <p>
         Exposing a user's preference (in the HTTP header field or {{Window/navigator}} object)
         potentially divides users into two groups in a way that might increase the information
-        available for browser or device fingerprinting. This additional information is available
-        unless the signal perfectly correlates with other signals or is turned on in a
-        non-configurable setting. Thus, depending on the implementation, the GPC signal may impose
-        a privacy cost, though, one intended to be justified by the privacy benefit of sending the
+        available for browser or device fingerprinting. This additional information is available 
+        unless the signal perfectly correlates with other signals or is turned on in a 
+        non-configurable setting. Thus, depending on the implementation, the GPC signal may impose 
+        a privacy cost, though, one intended to be justified by the privacy benefit of sending the 
         signal.
       </p>
     </section>
