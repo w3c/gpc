@@ -276,7 +276,7 @@
         </p>
         <aside class="example" title="Example GPC Request">
           <pre class="hljs http">
-            GET /something/here HTTP/2
+            GET /something/here HTTP/1.1
             Host: example.com
             Sec-GPC: 1
           </pre>
@@ -383,7 +383,7 @@
         </p>
         <aside class="example" title="example.org abides by GPC">
           <pre class="http">
-            GET /.well-known/gpc.json HTTP/2
+            GET /.well-known/gpc.json HTTP/1.1
             Host: example.org
             User-Agent: whatever
 
