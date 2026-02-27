@@ -9,7 +9,7 @@ Editors:
 
 Global Privacy Control (GPC) is a proposed specification designed to allow Internet users to notify businesses of their preference to not have their personal information sold or shared, or used for cross-context targeted advertising. It consists of a setting or extension in the user’s browser that provides a mechanism that websites can use to indicate they support the specification.
 
-This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well as a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice. 
+This Legal and Implementation Considerations Guide is designed to give an overview of how GPC operates as well as a summary of the legal effects GPC may have in different jurisdictions. However, this document is for reference purposes only --- it does not constitute legal advice.
 
 - [Global Privacy Control (GPC) Legal and Implementation Considerations Guide](#global-privacy-control-gpc-legal-and-implementation-considerations-guide)
   - [0. tl;dr](#0-tldr)
@@ -58,7 +58,7 @@ The specification also provides an option for sites to provide a GPC Support Res
 
 The GPC signal is either on or not present. If it is on, then an individual is expressing a privacy choice, for example, to opt out of the sale and data sharing per the California Consumer Privacy Act (CCPA). Sites may choose to support this request beyond what they are legally required to do and their vendors may choose to do so as well.
 
-If someone expresses a preference for their information to not be sold or shared, a device or browser that supports the feature will enable GPC signals.  GPC is signaled with an HTTP header and a property that can be read by JavaScript.  Sites can read either signal.
+If someone expresses a preference for their information to not be sold or shared, a device or browser that supports the feature will enable GPC signals. GPC is signaled with an HTTP header and a property that can be read by JavaScript. Sites can read either signal.
 
 ### 3.1 Header
 
@@ -72,13 +72,13 @@ This signal will be absent when no preference has been expressed or where GPC ha
 
 ### 3.2 Navigator Object
 
-Browsers that support JavaScript will expose `navigator.globalPrivacyControl`.  If `navigator.globalPrivacyControl` is `true`, then GPC has been enabled.
+Browsers that support JavaScript will expose `navigator.globalPrivacyControl`. If `navigator.globalPrivacyControl` is `true`, then GPC has been enabled.
 
-The `navigator.globalPrivacyControl` attribute will be present and have a value of `false` if the browser supports GPC but there has either been no preference expressed or GPC has been disabled.  This attribute will be absent only if the browser does not support GPC.
+The `navigator.globalPrivacyControl` attribute will be present and have a value of `false` if the browser supports GPC but there has either been no preference expressed or GPC has been disabled. This attribute will be absent only if the browser does not support GPC.
 
 ### 3.3 Signal Semantics
 
-When GPC is enabled, the browser is expressing a [do-not-sell-or-share preference](https://privacycg.github.io/gpc-spec/#dfn-preference).  These signals are direct requests to sites to respect that preference.
+When GPC is enabled, the browser is expressing a [do-not-sell-or-share preference](https://privacycg.github.io/gpc-spec/#dfn-preference). These signals are direct requests to sites to respect that preference.
 
 The specification presents this design to ensure that there can be no mistake in understanding the intent or state of the signal. If the signal is active, it expresses an individual’s privacy choice.
 
@@ -112,7 +112,7 @@ In 2018, California passed the first comprehensive privacy law in the United Sta
 
 Under the CCPA, the California Attorney General is empowered to issue regulations offering more clarity about specific portions of the text of the law. The [initial set of regulations](https://oag.ca.gov/privacy/ccpa/reg) provided more clarity on how global opt-out signals should be interpreted as opt-out requests under the law. See § 999.315. Requests to Opt-Out (though note that these regulations have since been superceded — see following paragraphs).
 
-In November 2020, California voters approved an update to the CCPA under the California Privacy Rights Act ballot initiative. The initiative expanded the CCPA in a number of ways, including through the creation of a new privacy regulator (the California Privacy Protection Agency) and through [increased specificity](https://thecpra.org/#1798.135(e)) on the legally binding nature of global privacy signals. Under the CPRA, the California Privacy Protection Agency was directed to expand on previously issued regulations.
+In November 2020, California voters approved an update to the CCPA under the California Privacy Rights Act ballot initiative. The initiative expanded the CCPA in a number of ways, including through the creation of a new privacy regulator (the California Privacy Protection Agency) and through [increased specificity](<https://thecpra.org/#1798.135(e)>) on the legally binding nature of global privacy signals. Under the CPRA, the California Privacy Protection Agency was directed to expand on previously issued regulations.
 
 In March 2023, the Agency issued [revised regulations](https://cppa.ca.gov/regulations/consumer_privacy_act.html), including provisions on the operation of "opt-out preference signals." See § 7025. Opt-out Preference Signals. The text includes detailed requirements around issues such as: the technical requirements for opt-out preference signals, when to apply browser-based opt-out preference signals to other consumer data, and when businesses can rely upon specific consent to disregard opt-out preference signals. The regulations includes illustrative examples on how the rules should work in practice.
 
@@ -144,11 +144,11 @@ Some U.S. states have passed comprehensive privacy laws that make no mention of 
 
 #### 4.1.5 Federal law and states without dedicated privacy laws
 
-The majority of U.S. states have not enacted comprehensive privacy legislation, and federally there is no privacy statute specifically covering commercial information. The Federal Trade Commission and state Attorneys General have enforced general purpose consumer protection law that prohibits unfair or deceptive practices against certain privacy behaviors, though none have made a specific claim about how GPC intersects with those laws. The FTC has proposed to issue regulations under its consumer protection statute governing “surveillance capitalism," and [some privacy advocacy groups have argued](https://advocacy.consumerreports.org/wp-content/uploads/2022/01/CR_Epic_FTCDataMinimization_012522_VF_.pdf) that failure to respond to universal opt-out requests could be treated as an unfair business practice under such a regulation. 
+The majority of U.S. states have not enacted comprehensive privacy legislation, and federally there is no privacy statute specifically covering commercial information. The Federal Trade Commission and state Attorneys General have enforced general purpose consumer protection law that prohibits unfair or deceptive practices against certain privacy behaviors, though none have made a specific claim about how GPC intersects with those laws. The FTC has proposed to issue regulations under its consumer protection statute governing “surveillance capitalism," and [some privacy advocacy groups have argued](https://advocacy.consumerreports.org/wp-content/uploads/2022/01/CR_Epic_FTCDataMinimization_012522_VF_.pdf) that failure to respond to universal opt-out requests could be treated as an unfair business practice under such a regulation.
 
 ### 4.2 GPC outside the US
 
-The European Union and European Economic Area have the General Data Protection Regulation (GDPR). This law provides for a number of bases for data processing, including consent and the "legitimate interest" of the data controller. For processing pursuant to a company’s "legitimate interest," Article 21 of the GDPR offers people an ability to object, or opt out, of such processing. As GPC is intended to convey a general request that data controllers limit the sale or sharing of the person's personal data to other data controllers, European regulators may deem GPC to constitute a legally binding invocation of Article 21 rights. To date, no European regulator has explicitly made this case, though some commentators have argued that [GPC has legal effect under the GDPR](https://berjon.com/gpc-under-the-gdpr/).
+The European Union and European Economic Area have the General Data Protection Regulation (GDPR). This law provides for a number of bases for data processing, including consent and the "legitimate interest" of the data controller. According to Article 7 of the GDPR people can withdraw their consent. For processing pursuant to a company’s "legitimate interest," Article 21 of the GDPR offers people an ability to object to such processing. As GPC is intended to convey a general request that data controllers limit the sale or sharing of the person's personal data to other data controllers, European regulators may deem GPC to constitute a legally binding invocation of Article 7 and 21 rights. To date, no European regulator has explicitly made this case, though some commentators have argued that [GPC has legal effect under the GDPR](https://berjon.com/gpc-under-the-gdpr/).
 
 Mauritius, an African country, has the Data Protection Act (DPA). The DPA was inspired by the GDPR. The law provides for a number of bases for data processing, including consent and the "legitimate interest" of the data controller. For processing pursuant to a company's "legitimate interest," Article 24 of the DPA offers people an ability to opt out of such processing. As GPC is intended to convey a general request that data controllers limit the sale or sharing of the person's personal data to other data controllers, Mauritian regulators may deem GPC to constitute a legally binding invocation of Article 24 rights. That would be the case if people's GPC opt out preferences are their only known opt out preferences or their GPC opt out preferences are in line with any other opt out preferences they invoked. However, in case of conflicts there might be ambiguities as there is no explicit mention of global opt-out mechanism winning over a direct consent to a specific sharing request on a specific site.
 
