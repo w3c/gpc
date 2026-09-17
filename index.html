@@ -550,7 +550,7 @@
       </table>
 
       <p>The <dfn class="export">Set Global Privacy Control</dfn> [=extension command=] modifies the
-      [=do-not-sell-or-share preference=] for the current session.
+      [=do-not-sell-or-share preference=] for the current session and returns the updated setting.
 
       <p>The [=remote end steps=], given <var>session</var>, <var>URL variables</var> and
       <var>parameters</var> are:
@@ -562,7 +562,8 @@
         [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=] if |gpc| is true and
         will not perform [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=] if
         |gpc| is false.
-        <li><p>Return [=success=] with data `null`.
+        <li><p>Let |result| be a JSON [=Object=] with property "<code>gpc</code>" set to |gpc|.
+        <li><p>Return [=success=] with data `result`.
       </ol>
 
       <h3 id="get-global-privacy-control">Get Global Privacy Control</h3>
