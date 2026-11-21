@@ -1,4 +1,4 @@
-# Global Privacy Control (GPC) Legal and Implementation Considerations Guide
+Ланплпгп# Global Privacy Control (GPC) Legal and Implementation Considerations Guide
 
 Editors:
 [Aram Zucker-Scharff](https://github.com/AramZS)
